@@ -1,0 +1,25 @@
+Le contexte:
+En tant que participant, je souhaite rejoindre un salon virtuel.
+Je reçois par e-mail une invitation à un salon.
+Au clique sur l'invitation, je suis redirigé sur le site internet à l'aide d'un lien et d'un token 
+(permettant l'identification du participant et du salon). 
+Admettons que le lien soit salon-3d.com/rejoindre-salon/token?xxxx
+
+Le besoin:
+ • Intercepter la requête vers la page salon-3d.com/rejoindre-salon
+ • Faire appel à une API in-memory pour vérifier si le participant est autorisé ou pas à rejoindre le salon
+ • Rediriger le participant vers le salon SI il est autorisé
+ • Afficher une modal "Vous n'êtes pas autorisé à rejoindre ce salon" SI il n'est pas autorisé
+
+Mes attentes :
+ • Compréhension des concepts SOLID et de la Clean Architecture
+ • Connaissances du testing et plus précisement du test unitaire
+ • Bonne maitrise des frameworks
+ • Approche TDD serait un plus
+
+Techno à utiliser:
+ • React
+ • Redux
+ • Thunk
+ • Jest
+ • Typescript
