@@ -13,8 +13,11 @@ function Verification(props) {
 
  useEffect(() => {
   props.checkAuth(token)
-  setModal(!props.auth.isAuthorized)
  }, [token])
+
+ useEffect(() => {
+   setModal(props.auth.toggleModal)
+ }, [props.auth.toggleModal])
 
   return (
     <div>

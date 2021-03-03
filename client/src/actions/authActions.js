@@ -1,4 +1,4 @@
-import { ACCESS_OK, ACCESS_FAIL } from "./types";
+import { ACCESS_OK, ACCESS_FAIL, TOGGLE_MODAL } from "./types";
 import axios from 'axios'
 
 export const checkAuth = (token) => (dispatch, getState) => {
@@ -19,4 +19,10 @@ export const checkAuth = (token) => (dispatch, getState) => {
         type: ACCESS_FAIL,
       });
     });
+};
+
+export const toggleModal = () => {
+  return {
+    type: TOGGLE_MODAL,
+  };
 };

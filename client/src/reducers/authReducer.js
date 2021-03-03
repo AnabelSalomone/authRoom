@@ -1,7 +1,10 @@
-import { ACCESS_OK, ACCESS_FAIL, CHECK_AUTH } from "../actions/types";
+import { toggleModal } from "../actions/authActions";
+import { ACCESS_OK, ACCESS_FAIL, CHECK_AUTH, TOGGLE_MODAL } from "../actions/types";
 
 const initialState = {
   isAuthorized: null,
+  isLoading: false,
+  toggleModal: false
 };
 
 // eslint-disable-next-line
@@ -23,7 +26,13 @@ export default function (state = initialState, action) {
         ...state,
         isAuthorized: false,
         isLoading: false,
+        toggleModal: true
       };
+    case TOGGLE_MODAL:
+      return{
+        ...state,
+        toggleModal: !toggleModal
+      }
     default:
       return state;
   }
