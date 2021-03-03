@@ -20,6 +20,7 @@ export default function (state = initialState, action) {
         ...state,
         isAuthorized: true,
         isLoading: false,
+        toggleModal: false
       };
     case ACCESS_FAIL:
       return {

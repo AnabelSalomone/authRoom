@@ -1,5 +1,8 @@
 const router = require("express").Router();
 const tokens = require("../data.json");
+var morgan = require("morgan");
+
+morgan("tiny")
 
 router.post("/", (req, res) => {
   const { token } = req.body;
