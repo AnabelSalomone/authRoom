@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { useDispatch } from "react-redux";
-import { TOGGLE_MODAL } from '../actions/types'
+import { TOGGLE_MODAL } from '../../actions/types'
  
 interface Props {
     modal: boolean,
